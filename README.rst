@@ -13,10 +13,15 @@ Usage
 
     ::audio[your optional title](/your/song.mp3 /your/other-song.ogg)
 
+    a markdown post
 
-Install
-=========
+    
+    ---
+    title: "my title"
+    content_type: "micro_post"
+    published: yes
+    ---
 
-::
+    Audio tag test
 
-    pip install --upgrade genignore
+    ::audio[title](/static/uploads/notification.mp3)
