@@ -11,7 +11,15 @@ Test One Audio tag
 >>> markdown.markdown(s, ['audio'])
 '<p><audio controls="controls"><source src="/url/1.mp3" type="audio/mp3"></source></audio></p>'
 
+Test Two Audio tags
+
 >>> s = "::audio[my title](/url/1.mp3 /url/2.ogg)"
+>>> markdown.markdown(s, ['audio'])
+'<p><audio controls="controls"><source src="/url/1.mp3" type="audio/mp3"></source><source src="/url/2.ogg" type="audio/ogg"></source></audio></p>'
+
+Test Two Audio tags remove commas
+
+>>> s = "::audio[my title](/url/1.mp3, /url/2.ogg)"
 >>> markdown.markdown(s, ['audio'])
 '<p><audio controls="controls"><source src="/url/1.mp3" type="audio/mp3"></source><source src="/url/2.ogg" type="audio/ogg"></source></audio></p>'
 """
